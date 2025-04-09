@@ -6,26 +6,27 @@ import jakarta.persistence.Id;
 import lombok.*;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
-@Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
-public class Staff {
+    @Entity
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Getter
+    @Setter
+    @ToString
+    public class Staff {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int staffId;
+    private Integer staffId;
     private String firstName;
     private String lastName;
-    private int addressId;
-    private byte[] picture;  // BLOB
+    private Integer addressId;
+    private String picture;
     private String email;
-    private int storeId;
-    private boolean active;
+    private Integer storeId;
+    private Integer active;
     private String username;
     private String password;
-    private Timestamp lastUpdate;
+    private Date lastUpdate;
 }
